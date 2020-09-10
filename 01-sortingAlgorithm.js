@@ -20,7 +20,7 @@ console.log(sort([7, 12, 4, 2]))
 //insertion sort
 //why is it important to learn these simpler sorting algorithms?
 
-
+//
 
 ////////////////////////////////////////////
 ///////////////*** compare ***///////////////////
