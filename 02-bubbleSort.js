@@ -1,4 +1,4 @@
-//swap 1
+//** SWAP 1 ** 
 // function swap(arr, idx1, idx2){
 //     let temp = arr[idx1] //
 //     arr[idx1] = arr[idx2] //
@@ -7,11 +7,15 @@
 // }
 // console.log(swap([33,44], 0, 1))//[4,3]
 
-//swap 2 ES6
+//** SWAP2 ** ES6
 //[arr[0], arr[1]] = [arr[1], arr[0]];
 
 
 
+
+///////////////////////////////////////////////////////////////////////
+///////////////*** BUBBLE SORT QUESTION ***///////////////////////////
+//////////////////////////////////////////////////////////////////////
 //swap the elements in the array's order so the smallest number is at first and the largest number is at the last.
 
 // pseudocode
@@ -20,8 +24,9 @@
 // 3. if arr[j] is greater than arr[j+1], swap those two values.
 // 4. return the sorted array.
 
+
 /////////////////////////////////////////////////
-///////////////***  ***///////////////////
+///////////////*** naive solution ***///////////////////
 ////////////////////////////////////////////////
 //This is not the best bc it calculates unnecessary input(j+1) at the end.
 
@@ -42,44 +47,17 @@
 
 
 
-/////////////////////////////////////////////////
-///////////////***  ***///////////////////
-////////////////////////////////////////////////
-// function bubble(arr){
-//     for(let i = arr.length; i > 0 ; i--){
-//         for(let j = 0; j < i-1; j++ ){
-//             console.log(arr, arr[j], arr[j+1])
-//             if(arr[j] > arr [j+1]){
-//                 let temp = arr[j]
-//                 arr[j] = arr[j+1]
-//                 arr[j+1] = temp
-//             }
-//         }
-//         console.log("1 round")
-//     }
-//     return arr
-// }
-// console.log(bubble([37,45,29,4]))
-
-
-
-
-/////////////////////////////////////////////////
-///////////////*** swap and bubble ***///////////////////
-////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////*** BUBBLE: compare and swap ***////////////////////////
+//////////////////////////////////////////////////////////////////////
 function bubble(arr){
-
-    function swap(arr, idx1, idx2){
-        [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
-    }
-
     for(let i = arr.length; i > 0 ; i--){
-        console.log("i", i)
         for(let j = 0; j < i-1; j++ ){
-            console.log("j", j)
-            if(arr[j] > arr[j+1]){
-                console.log("arr[j]", arr[j])
-               swap(arr, j, j+1)
+            console.log(arr, arr[j], arr[j+1])
+            if(arr[j] > arr [j+1]){
+                let temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
             }
         }
         console.log("1 round")
@@ -87,3 +65,30 @@ function bubble(arr){
     return arr
 }
 console.log(bubble([37,45,29,4]))
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+///////////////***  BUBBLE: compare and swap using swap helper func ***///////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+// function bubble(arr){
+
+//     function swap(arr, idx1, idx2){
+//         [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
+//     }
+
+//     for(let i = arr.length; i > 0 ; i--){
+//         console.log("i", i)
+//         for(let j = 0; j < i-1; j++ ){
+//             console.log("j", j)
+//             if(arr[j] > arr[j+1]){
+//                 console.log("arr[j]", arr[j])
+//                swap(arr, j, j+1)
+//             }
+//         }
+//         console.log("1 round")
+//     }
+//     return arr
+// }
+// console.log(bubble([37,45,29,4]))
