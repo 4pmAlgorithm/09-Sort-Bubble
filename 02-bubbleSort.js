@@ -58,26 +58,26 @@
 
 
 
-/////////////////////////////////////////////////
-///////////////*** swap and bubble ***///////////////////
-////////////////////////////////////////////////
-function bubble(arr){
+// /////////////////////////////////////////////////
+// ///////////////*** swap and bubble ***///////////////////
+// ////////////////////////////////////////////////
+// function bubble(arr){
 
-    function swap(arr, idx1, idx2){
-        [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
-    }
+//     function swap(arr, idx1, idx2){
+//         [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
+//     }
 
-    for(let i = arr.length; i > 0 ; i--){
-        console.log("i", i)
-        for(let j = 0; j < i-1; j++ ){
-            console.log("j", j)
-            if(arr[j] > arr[j+1]){
-                console.log("arr[j]", arr[j])
-               swap(arr, j, j+1)
-            }
-        }
-        console.log("1 round")
-    }
-    return arr
-}
-console.log(bubble([37,45,29,4]))
+//     for(let i = arr.length; i > 0 ; i--){
+//         console.log("i", i)
+//         for(let j = 0; j < i-1; j++ ){
+//             console.log("j", j)
+//             if(arr[j] > arr[j+1]){
+//                 console.log("arr[j]", arr[j])
+//                swap(arr, j, j+1)
+//             }
+//         }
+//         console.log("1 round")
+//     }
+//     return arr
+// }
+// console.log(bubble([37,45,29,4]))
