@@ -15,6 +15,7 @@ console.log(sort([7, 12, 4, 2]))
 //https://www.toptal.com/developers/sorting-algorithms
 //https://www.visualgo.net
 
+
 //bubble sort
 //selection sort
 //insertion sort
