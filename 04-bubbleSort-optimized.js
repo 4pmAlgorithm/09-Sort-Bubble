@@ -14,11 +14,14 @@ function bubbleSort(arr){
                 let temp = arr[j]
                 arr[j] = arr[j+1]
                 arr[j+1] = temp
+                console.log(arr[i])
                 noSwaps = false
             }
         }
+        if(noSwaps) break;
     }
-    if(noSwaps) break;
-}
-
+    return arr
+    }
+  
+console.log(bubbleSort([9,8,7,6]))
 //if there wasn't swap, then no need to swap in the future. 
